@@ -4,6 +4,10 @@ class DecksController < ApplicationController
         @decks = Deck.all
         render json: @decks
     end
+
+    def userDecks
+        render json: current_user.decks
+    end
     
     def create
         @deck=Deck.create(user_id: current_user.id, name: params["deck"]["name"], deck_type: params["deck"]["deck_type"])
