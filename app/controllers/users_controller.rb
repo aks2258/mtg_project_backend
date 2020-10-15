@@ -6,6 +6,11 @@ class UsersController < ApplicationController
       render json: @user
     end
 
+    def user_decks
+      @userDecks = current_user.decks
+      render json: @userDecks
+    end
+
     def create
       user = User.create(user_params)
      

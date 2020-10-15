@@ -10,7 +10,9 @@ class DecksController < ApplicationController
     end
     
     def create
-        @deck=Deck.create(user_id: current_user.id, name: params["deck"]["name"], deck_type: params["deck"]["deck_type"])
+        @deck=Deck.create(user_id: current_user.id, 
+                        name: params["deck"]["name"], 
+                        deck_type: params["deck"]["deck_type"])
         puts "============================="
         puts current_user
         puts @deck
@@ -19,16 +21,18 @@ class DecksController < ApplicationController
     end
 
     def show
-        @deck =  Deck.find(params[:id])
-        render json: @deck
+        @deck = Deck.find(params[:id])
+        render json: {deck: @deck, cards: @deck.cards}
     end
 
     def update
         @deck = Deck.find(params[:id])
+        render json: @deck
     end
 
     def destroy
         @deck = Deck.find(params[:id])
+        render json: @deck
     end
 
     private

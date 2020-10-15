@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2020_10_12_171947) do
     t.string "power"
     t.string "toughness"
     t.string "imgUrl"
+    t.integer "deck_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -42,6 +43,7 @@ ActiveRecord::Schema.define(version: 2020_10_12_171947) do
     t.integer "user_id"
     t.string "deck_type"
     t.string "recommended_cards"
+    t.string "cards"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

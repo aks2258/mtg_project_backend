@@ -5,6 +5,7 @@ class CreateDecks < ActiveRecord::Migration[6.0]
       t.integer :user_id
       t.string :deck_type
       t.string :recommended_cards
+      t.string :cards
 
       t.timestamps
     end

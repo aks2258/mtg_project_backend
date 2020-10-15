@@ -11,6 +11,7 @@ class CreateCards < ActiveRecord::Migration[6.0]
       t.string :power
       t.string :toughness
       t.string :imgUrl
+      t.integer :deck_id
 
       t.timestamps
     end
