@@ -7,7 +7,7 @@ class CreateCards < ActiveRecord::Migration[6.0]
       t.string :type
       t.string :types
       t.string :subtypes
-      t.string :card_id
+      t.string :card_effect
       t.string :power
       t.string :toughness
       t.string :imgUrl

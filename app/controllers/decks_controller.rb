@@ -4,10 +4,6 @@ class DecksController < ApplicationController
         @decks = Deck.all
         render json: @decks
     end
-
-    def userDecks
-        render json: current_user.decks
-    end
     
     def create
         @deck=Deck.create(user_id: current_user.id, 
@@ -32,7 +28,6 @@ class DecksController < ApplicationController
 
     def destroy
         @deck = Deck.find(params[:id])
-        render json: @deck
     end
 
     private
