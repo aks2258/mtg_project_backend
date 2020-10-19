@@ -28,6 +28,8 @@ class DecksController < ApplicationController
 
     def destroy
         @deck = Deck.find(params[:id])
+        @deck.destroy
+        render json: "Deck Deleted"
     end
 
     private

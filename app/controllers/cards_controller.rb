@@ -11,7 +11,7 @@ class CardsController < ApplicationController
                         colors: params["card"]["colors"],
                         types: params["card"]["types"],
                         subtypes: params["card"]["subtypes"],
-                        card_id: params["card"]["card_id"],
+                        card_effect: params["card"]["card_effect"],
                         power: params["card"]["power"],
                         toughness: params["card"]["toughness"],
                         imgUrl: params["card"]["imgUrl"],
@@ -36,6 +36,7 @@ class CardsController < ApplicationController
 
     def destroy
         @card = Card.find(params[:id])
-        render json: @deck
+        @card.destroy
+        render json: "Card Deleted"
     end
 end
