@@ -1,6 +1,7 @@
 # Imperfect Gathering
 A site where you can build decks for the card game Magic the Gathering.
 
+
 ## Demo: https://www.youtube.com/watch?v=VhLmw2lHMnc&feature=youtu.be
 
 ## Table of Contents ##
@@ -22,3 +23,7 @@ After I got back into the popular card game Magic the Gathering, I saw that my d
 2. Using your terminal, navigate to the root folder of your cloned repository and run "bundle install."
 4. Create and migrate the database by typing "rails db:create" and "rails db:migrate" in the terminal.
 5. Run the server by typing "rails s" in the terminal.
+
+## Future Implementations
+One future implementaion is creating a model and controller for posts that users can create for reviews of decks and recommended cards. Also adding an attribute for Decks model to hold "text," for descriptions of how a users deck is supposed to be played.
+
