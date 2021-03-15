@@ -10,10 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_27_181235) do
+ActiveRecord::Schema.define(version: 2020_10_12_171947) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cards", force: :cascade do |t|
+    t.string "name"
+    t.string "manaCost"
+    t.string "colors"
+    t.string "type"
+    t.string "types"
+    t.string "subtypes"
+    t.string "card_effect"
+    t.string "power"
+    t.string "toughness"
+    t.string "imgUrl"
+    t.integer "deck_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "deck_cards", force: :cascade do |t|
+    t.integer "deck_id"
+    t.integer "card_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "decks", force: :cascade do |t|
+    t.string "name"
+    t.integer "user_id"
+    t.string "deck_type"
+    t.string "recommended_cards"
+    t.string "cards"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
