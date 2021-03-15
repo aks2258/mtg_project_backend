@@ -1,6 +1,9 @@
 # Imperfect Gathering
 A site where you can build decks for the card game Magic the Gathering.
 
+
+## Demo: https://www.youtube.com/watch?v=VhLmw2lHMnc&feature=youtu.be
+
 ## Table of Contents ##
 ### Inspiration
 ### Technologies Used
@@ -11,6 +14,7 @@ After I got back into the popular card game Magic the Gathering, I saw that my d
 
 ## Technologies Used
 - Ruby
+- Rails
 - PostgreSQL
 - Bcrypt
 
@@ -22,3 +26,4 @@ After I got back into the popular card game Magic the Gathering, I saw that my d
 
 ## Future Implementations
 One future implementaion is creating a model and controller for posts that users can create for reviews of decks and recommended cards. Also adding an attribute for Decks model to hold "text," for descriptions of how a users deck is supposed to be played.
+
